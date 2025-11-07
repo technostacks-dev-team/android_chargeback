@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F5F7">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        app:contentInsetEnd="0dp"
+        app:contentInsetStart="0dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="18dp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ivBack"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="#ffffff"
+                android:padding="1dp"
+                android:theme="@style/RoundImageWithBorder"
+                android:elevation="2dp"
+                app:contentPadding="14dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_back" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/create_subscription"
+                android:textColor="#212121"
+                android:textSize="18sp"
+                app:fontFamily="@font/graphik_trial_medium"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvSave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/save"
+                android:textColor="#98A2B3"
+                android:textSize="16sp"
+                app:fontFamily="@font/graphik_trial_medium"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clService"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="18dp"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/bg_view_24_radius"
+        android:padding="20dp"
+        app:layout_constraintEnd_toEndOf="@id/toolbar"
+        app:layout_constraintStart_toStartOf="@id/toolbar"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivAdd"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="#EBEEFF"
+            android:theme="@style/RoundImage"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_add" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvChooseService"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="2dp"
+            android:text="@string/choose_a_service"
+            android:textColor="@color/default_grey"
+            android:textSize="18sp"
+            app:fontFamily="@font/graphik_trial_regular"
+            app:layout_constraintBottom_toTopOf="@id/tvAmount"
+            app:layout_constraintStart_toEndOf="@id/ivAdd"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="@string/temp_0_dollar"
+            android:textColor="#636A79"
+            android:textSize="16sp"
+            app:fontFamily="@font/graphik_trial_regular"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tvChooseService"
+            app:layout_constraintTop_toBottomOf="@id/tvChooseService" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clCategory"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="18dp"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/bg_view_24_radius"
+        android:padding="20dp"
+        app:layout_constraintEnd_toEndOf="@id/toolbar"
+        app:layout_constraintStart_toStartOf="@id/toolbar"
+        app:layout_constraintTop_toBottomOf="@id/clService">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:paddingVertical="8dp"
+            android:text="@string/name"
+            android:textColor="#667085"
+            android:textSize="16sp"
+            app:fontFamily="@font/graphik_trial_regular"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvServiceName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="8dp"
+            android:paddingVertical="5dp"
+            android:text="@string/choose_a_service"
+            android:textColor="#98A2B3"
+            android:textSize="16sp"
+            app:drawableEndCompat="@drawable/ic_choose"
+            app:fontFamily="@font/graphik_trial_regular"
+            app:layout_constraintBottom_toBottomOf="@id/tvName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvName" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:dividerColor="#F4F5F7"
+            app:dividerInsetEnd="0dp"
+            app:dividerInsetStart="0dp"
+            app:dividerThickness="1dp"
+            app:layout_constraintTop_toBottomOf="@id/tvName" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/lblAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="2dp"
+            android:paddingVertical="8dp"
+            android:text="@string/amount"
+            android:textColor="#667085"
+            android:textSize="16sp"
+            app:fontFamily="@font/graphik_trial_regular"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divName" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvAmountDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/temp_0_dollar"
+            android:textColor="#212121"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/lblAmount"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/lblAmount" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:dividerColor="#F4F5F7"
+            app:dividerInsetEnd="0dp"
+            app:dividerInsetStart="0dp"
+            app:dividerThickness="1dp"
+            app:layout_constraintTop_toBottomOf="@id/lblAmount" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/lblCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="2dp"
+            android:paddingVertical="8dp"
+            android:text="@string/category"
+            android:textColor="#667085"
+            android:textSize="16sp"
+            app:fontFamily="@font/graphik_trial_regular"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divAmount" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="8dp"
+            android:paddingVertical="5dp"
+            android:text="@string/temp_0_dollar"
+            android:textColor="#212121"
+            android:textSize="16sp"
+            android:gravity="center_vertical"
+            app:drawableEndCompat="@drawable/ic_choose"
+            app:drawableStartCompat="@drawable/ic_subscription"
+            app:layout_constraintBottom_toBottomOf="@id/lblCategory"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/lblCategory" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="18dp"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/bg_view_24_radius"
+        android:padding="20dp"
+        app:layout_constraintEnd_toEndOf="@id/toolbar"
+        app:layout_constraintStart_toStartOf="@id/toolbar"
+        app:layout_constraintTop_toBottomOf="@id/clCategory">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvStartDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:paddingVertical="8dp"
+            android:text="@string/start_date"
+            android:textColor="#667085"
+            android:textSize="16sp"
+            app:fontFamily="@font/graphik_trial_regular"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvStartDateValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_view_10_radius"
+            android:backgroundTint="#F2F4F7"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="6dp"
+            android:text="@string/apr_12_2025"
+            android:textColor="#212121"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/tvStartDate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvStartDate" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divStartDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:dividerColor="#F4F5F7"
+            app:dividerInsetEnd="0dp"
+            app:dividerInsetStart="0dp"
+            app:dividerThickness="1dp"
+            app:layout_constraintTop_toBottomOf="@id/tvStartDate" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvFrequency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="2dp"
+            android:paddingVertical="8dp"
+            android:text="@string/frequency"
+            android:textColor="#667085"
+            android:textSize="16sp"
+            app:fontFamily="@font/graphik_trial_regular"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divStartDate" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvFrequencyValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="8dp"
+            android:paddingVertical="5dp"
+            android:text="@string/weekly"
+            android:textColor="#212121"
+            android:textSize="16sp"
+            app:drawableEndCompat="@drawable/ic_choose"
+            app:layout_constraintBottom_toBottomOf="@id/tvFrequency"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvFrequency" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divFrequency"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:dividerColor="#F4F5F7"
+            app:dividerInsetEnd="0dp"
+            app:dividerInsetStart="0dp"
+            app:dividerThickness="1dp"
+            app:layout_constraintTop_toBottomOf="@id/tvFrequency" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvActive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="2dp"
+            android:paddingVertical="8dp"
+            android:text="@string/active"
+            android:textColor="#667085"
+            android:textSize="16sp"
+            app:fontFamily="@font/graphik_trial_regular"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divFrequency" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switchActive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:minWidth="50dp"
+            android:minHeight="0dp"
+            app:layout_constraintBottom_toBottomOf="@id/tvActive"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvActive"
+            app:switchMinWidth="50dp"
+            app:useMaterialThemeColors="false" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

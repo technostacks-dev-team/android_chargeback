@@ -1,0 +1,27 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Base.Theme.ChargebackUI" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.ChargebackUI" parent="Base.Theme.ChargebackUI" />
+
+    <style name="RoundImageWithBorder" parent="Base.Theme.ChargebackUI">
+        <item name="cornerSize">50%</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="strokeColor">#D0D5DD</item>
+    </style>
+
+    <style name="RoundImage" parent="Base.Theme.ChargebackUI">
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="AppSearchView" parent="Base.Theme.ChargebackUI">
+        <item name="android:editTextColor">@color/black</item>
+        <item name="android:textColorHint">@color/black</item>
+        <item name="selectableItemBackground">@color/white</item>
+        <item name="simpleItemSelectedColor">@color/white</item>
+        <item name="colorControlActivated">@color/black</item>
+    </style>
+</resources>
